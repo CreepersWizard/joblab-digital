@@ -47,7 +47,41 @@ pre {
     height: 200px;
     margin: 10px;
   }
-
+  #navbar {
+    overflow: hidden;
+    background-color: #f2f2f2;
+  }
+  
+  #navbar a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+  #navbar a:hover {
+    background-color: #531B00;
+    color: white;
+  }
+  #navbar a.active {
+    background-color: #04AA6D;
+    color: black;
+  }
+  
+  .content {
+    padding: 16px;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .sticky + .content {
+    padding-top: 60px;
+  }
 
 details code {
     font-size: 1.1em;
