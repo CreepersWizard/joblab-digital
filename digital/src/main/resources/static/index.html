@@ -18,23 +18,23 @@
       
     <p>cliccate sui pulsanti sotto per vedere i dati restituiti dal back-end</p>
 
-    <details id="btnCars">
-        <summary>Auto in vendita</summary>
-        <pre><code id="resultCars"></code>
-        </pre>
-    </details>
+    <div id="btnCars" >
+        Auto in vendita
+        <code id="resultCars"></code>
+        
+    </div>
 
-    <details id="btnClothes">
-        <summary>Vestiti in vendita</summary>
-        <pre><code id="resultClothes"></code>
-        </pre>
-    </details>
+    <div id="btnClothes">
+        Vestiti in vendita
+        <code id="resultClothes"></code>
+        
+    </div>
 
-    <details id="btnTechs">
-        <summary>Gadget in vendita</summary>
-        <pre><code id="resultTechs"></code>
-        </pre>
-    </details>
+    <div id="btnTechs">
+        Gadget in vendita
+        <code id="resultTechs">
+        
+    </div>
 
     <p>sotto invece alcuni suggerimenti su come creare</p>
     <details>
@@ -62,9 +62,45 @@
          * idCode: l'id dell'elemento in cui incollare il contenuto
          */
         async function showDataInCode(f, idCode) {
-            const data = await f();
             const codeElement = document.getElementById(idCode);
-            codeElement.innerHTML = JSON.stringify(data, null, 4);
+            const data = await f();
+            data.forEach(element => {
+                var div1 = document.createElement('div');
+                div1.className = "flex-container";
+                div1.style = {
+                                display: "flex",
+                                flexWrap: "nowrap",
+                                backgroundColor: "#32CD32"
+                            };
+                var div = document.createElement('div');
+                div.style = {
+                                backgroundColor: "#98FB98",
+                                width: "150px",
+                                textAlign: "center",
+                                lineHeight: "150px",
+                                
+                            };
+                div1.appendChild(div);
+                var h3 = document.createElement('div');
+                h3.textContent = element.name;
+                div.appendChild(h3);
+                var img = document.createElement('img');
+                img.src = element.image;
+                img.width = 250;
+                img.height = 250;
+                div.appendChild(img);
+                var h1 = document.createElement('div');
+                h1.textContent = "Price: €"+element.price;
+                div.appendChild(h1);
+                var button = document.createElement('button');
+                button.textContent = "Details";
+                div.appendChild(button);
+
+                codeElement.appendChild(div1);
+            });
+            
+            
+            
         }
 
         /***
@@ -77,11 +113,7 @@
          */
         async function addToggleEventToDetail(type) {
             const detailElement = document.getElementById(`btn${type}`);
-            detailElement.addEventListener("toggle", (event) => {
-                if (detailElement.open) {
-                    showDataInCode(fetch[`get${type}`], `result${type}`)
-                }
-            });
+            showDataInCode(fetch[`get${type}`], `result${type}`)
         }
 
         //Applico la logica di chiamata ed esposizione per tutti i 3 tipi di servizio che ho a disposizione

@@ -35,6 +35,20 @@ pre {
     border-radius: 5px;
 }
 
+.flex-container {
+    display: flex;
+    flex-wrap:nowrap ;
+    background-color: #32CD32;
+  }
+  
+  .flex-container > div {
+    background-color: #98FB98;
+    text-align: center;
+    height: 200px;
+    margin: 10px;
+  }
+
+
 details code {
     font-size: 1.1em;
     max-width: 100wv;
