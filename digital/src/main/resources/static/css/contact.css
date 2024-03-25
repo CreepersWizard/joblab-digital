@@ -4,7 +4,7 @@
 
 html,
 body {
-    background-color: #EE7AE9;
+  background-color: #E284DF;
     max-width: 100wv;
     max-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
@@ -65,7 +65,7 @@ pre {
   #navbar {
     overflow: hidden;
     color: white;
-    background-color: #D15FEE;
+    background-color: #D559D1;
   }
   
   #navbar a {
@@ -77,7 +77,7 @@ pre {
     text-decoration: none;
   }
   #navbar a:hover {
-    background-color: #B23AEE;
+    background-color: #a93ea6;
     color: white;
   }
   #navbar a.active {
@@ -101,7 +101,7 @@ pre {
   .sidebar {
     position: fixed;
     height: 100%; 
-    background-color: #CD00CD;
+    background-color: #D559D1;
     position: left;
     overflow: auto;
     
@@ -139,7 +139,8 @@ details code {
 }
 
 .contacts{
-  background-color:  #FFBBFF;
+  background-color:  #ff9dfc;
+  border: 5px solid #E75CE3;
   width: 300px;
   margin-left: 10px;
   padding: 10px;
@@ -152,6 +153,9 @@ h1{
 }
 
 .mappa{
+  border: 5px solid #E75CE3;
   margin-top: 50px;
   margin-left: 10px;
+  height: 460px;
+  width: 610px;
 }
