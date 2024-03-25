@@ -90,6 +90,7 @@ pre {
     padding-top: 60px;
   }
   .sidebar {
+    position: fixed;
     height: 100%; 
     background-color: white;
     position: left;
