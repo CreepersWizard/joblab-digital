@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joblab - Modulo Digital</title>
-    <link rel="stylesheet" href="./css/main.css">
-
+    <link rel="stylesheet" href="./css/about.css">
 </head>
 
 <body>
@@ -15,38 +14,24 @@
         
         <p>nome cognome</p>
         <br>
-        <p id="date"> 
+        <p id="date"></p>
+        <script>
+            const d = new Date();
+            document.getElementById("date").innerHTML = d.getHours()+":"+d.getMinutes();
+        </script>
         
-            <script>
-                    
-
-            setInterval(function(){
-            var currentTime = new Date()
-            var hours = currentTime.getHours()
-            var minutes = currentTime.getMinutes()
-            if (minutes < 10){
-                minutes = "0" + minutes
-            }
-            var t_str = hours + ":" + minutes;
-            document.getElementById("date").textContent = t_str;
-            console.log(t_str);}
-            , 1000 );
-            </script>
-        
-        </p>
-                
     </div>
     <div style="margin-left:25%">
 
-    <div id="navbar" class="sticky">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </div>
+        <div id="navbar" class="sticky">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
     
      <br>
      <br>
-    <h1 class="alignCenter">
+    <!-- <h1 class="alignCenter">
         Auto in vendita
         <div id="btnCars"><code id="resultCars"></code></div>
     </h1>
@@ -57,7 +42,7 @@
     <h1 class="alignCenter">
         Gadget in vendita
         <div id="btnTechs"><code id="resultTechs"></code></div>
-    </h1>
+    </h1> -->
 
 
     <!-- <p>sotto invece alcuni suggerimenti su come creare</p>
@@ -77,10 +62,7 @@
         <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">Riferimento MDN</a></p>
     </details>
     </div> -->
-    <script type="module">
-
-        
-
+    <!-- <script type="module">
         import fetch from './js/fetch.js';
 
         /***
@@ -121,9 +103,9 @@
             
             
             
-        }
+        } -->
 
-        /***
+        <!-- /***
          * Funzione che aggiunge all'evento di apertura la chiamata al servizio del back-end
          * @Parameters:
          * type => il tipo di output da visualizzare, è il riferimento per:
@@ -138,7 +120,7 @@
 
         //Applico la logica di chiamata ed esposizione per tutti i 3 tipi di servizio che ho a disposizione
         ["Cars", "Techs", "Clothes"].forEach(type => addToggleEventToDetail(type));
-    </script>
+    </script> -->
 </body>
 
 </html>
