@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joblab - Modulo Digital</title>
     <link rel="stylesheet" href="./css/main.css">
+
 </head>
 
 <body>
@@ -14,12 +15,26 @@
         
         <p>nome cognome</p>
         <br>
-        <p id="date"></p>
-        <script>
-            const d = new Date();
-            document.getElementById("date").innerHTML = d.getHours()+":"+d.getMinutes();
-        </script>
+        <p id="date"> 
         
+            <script>
+                    
+
+            setInterval(function(){
+            var currentTime = new Date()
+            var hours = currentTime.getHours()
+            var minutes = currentTime.getMinutes()
+            if (minutes < 10){
+                minutes = "0" + minutes
+            }
+            var t_str = hours + ":" + minutes;
+            document.getElementById("date").textContent = t_str;
+            console.log(t_str);}
+            , 1000 );
+            </script>
+        
+        </p>
+                
     </div>
     <div style="margin-left:25%">
 
@@ -63,6 +78,9 @@
     </details>
     </div> -->
     <script type="module">
+
+        
+
         import fetch from './js/fetch.js';
 
         /***
