@@ -37,23 +37,42 @@ pre {
 }
 
 .flex-container {
+    width: 100%;
     flex-direction: row;
     display: inline-flex;
     flex-wrap: wrap ;
     background-color: #9B30FF;
+    justify-content: center;
   }
   
   .flex-container > div {
     background-color: #AB82FF;
-    text-align: center;
-    width: 300px;
-    width: 400px;
-    white-space: nowrap;
+    text-align: justify;
+    
+    width: 45%;
     margin: 10px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
+    
+  }
+
+  .flex-container > div > h2 {
+    
+    text-align: left;
+    
+  }
+  .flex-container > div > img {
+    
+    padding-top:10px;
+    padding-bottom:10px;
+    
+  }
+
+  .flex-container > div > p {
+    
+    margin: 10px;
     
   }
 
