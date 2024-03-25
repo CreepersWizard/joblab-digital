@@ -137,3 +137,21 @@ details code {
     word-wrap: break-word;
     /* Internet Explorer 5.5+ */
 }
+
+.contacts{
+  background-color:  #FFBBFF;
+  width: 300px;
+  margin-left: 10px;
+  padding: 10px;
+}
+
+
+
+h1{
+  margin-left: 10px;
+}
+
+.mappa{
+  margin-top: 50px;
+  margin-left: 10px;
+}
