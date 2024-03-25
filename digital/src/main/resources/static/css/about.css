@@ -4,7 +4,7 @@
 
 html,
 body {
-    background-color: #EE7AE9;
+  background-color: #E284DF;
     max-width: 100wv;
     max-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
@@ -41,12 +41,12 @@ pre {
     flex-direction: row;
     display: inline-flex;
     flex-wrap: wrap ;
-    background-color: #9B30FF;
+    background-color: #E75CE3;
     justify-content: center;
   }
   
   .flex-container > div {
-    background-color: #AB82FF;
+    background-color: #E983E6;
     text-align: justify;
     
     width: 45%;
@@ -84,7 +84,7 @@ pre {
   #navbar {
     overflow: hidden;
     color: white;
-    background-color: #D15FEE;
+    background-color: #D559D1;
   }
   
   #navbar a {
@@ -96,7 +96,7 @@ pre {
     text-decoration: none;
   }
   #navbar a:hover {
-    background-color: #B23AEE;
+    background-color: #a93ea6;
     color: white;
   }
   #navbar a.active {
@@ -120,7 +120,7 @@ pre {
   .sidebar {
     position: fixed;
     height: 100%; 
-    background-color: #CD00CD;
+    background-color: #D559D1;
     position: left;
     overflow: auto;
     
