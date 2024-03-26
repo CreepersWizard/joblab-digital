@@ -209,3 +209,18 @@ because the nesting selector cannot represent pseudo-elements. */
     background-color: rgb(0 0 0 / 0%);
   }
 }
+
+
+.pagamento {
+  display: flex;
+  background-color: #D559D1;
+  align: right;
+}
+
+.pagamento > div {
+  background-color: #FFBBFF;
+  align-items: stretch;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
