@@ -29,6 +29,9 @@
             if (minutes < 10){
                 minutes = "0" + minutes
             }
+            if (hours < 10){
+                hours = "0" + hours
+            }
             var t_str = hours + ":" + minutes;
             document.getElementById("date").textContent = t_str;
             console.log(t_str);}
