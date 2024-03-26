@@ -114,12 +114,49 @@
                 img.height = 250;
                 div.appendChild(img);
                 var h1 = document.createElement('div');
-                h1.textContent = "Price: €"+element.price;
+                h1.textContent = "Price: €"+Intl.NumberFormat("de-DE").format(element.price);
                 h1.style.fontSize = "20px";
                 div.appendChild(h1);
                 var button = document.createElement('button');
                 button.textContent = "Details";
+                button.class = "show";
                 div.appendChild(button);
+                
+                var dialog = document.createElement('dialog');
+                dialog.class = "dialog";
+                div.appendChild(dialog);
+
+
+                var h3_2 = h3.cloneNode(true);
+                dialog.appendChild(h3_2);
+                var img_2 = img.cloneNode(true);
+                dialog.appendChild(img_2);
+                var h1_2 = h1.cloneNode(true);
+                dialog.appendChild(h1_2);
+                var h0 = document.createElement('h0');
+                h0.textContent = element.longDescription;
+                dialog.appendChild(h0);
+                var br = document.createElement('br');
+                dialog.appendChild(br);
+                
+                
+
+
+                var button2 = document.createElement('button');
+                button2.textContent = "Close";
+                button2.class = "close";
+                dialog.appendChild(button2);
+                
+                
+
+                button.addEventListener("click", () => {
+                    dialog.showModal();
+                });
+
+                button2.addEventListener("click", () => {
+                    dialog.close();
+                });
+
 
                 codeElement.appendChild(div1);
             });

@@ -1,161 +1,161 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
 body {
-  background-color: #FFBBFF;
-    max-width: 100wv;
-    max-height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
-    margin:0;
-    padding:0;
+background-color: #FFBBFF;
+  max-width: 100wv;
+  max-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  margin:0;
+  padding:0;
 }
 
 body{
-    margin:auto;
-    height:100%;
+  margin:auto;
+  height:100%;
 }
 
 details {
-    padding: 10px;
-    background-color: #e4eaef;
-    border-radius: 5px;
-    max-width: 90%;
-    margin: 0.5em auto;
+  padding: 10px;
+  background-color: #e4eaef;
+  border-radius: 5px;
+  max-width: 90%;
+  margin: 0.5em auto;
 }
 
 details>*:not(summary) {
-    margin: 0.75em 0 0 0;
+  margin: 0.75em 0 0 0;
 }
 
 pre {
-    color: white;
-    background: #30353b;
-    padding: 1em;
-    border-radius: 5px;
+  color: white;
+  background: #30353b;
+  padding: 1em;
+  border-radius: 5px;
 }
 
 .flex-container {
-    flex-direction: row;
-    display: inline-flex;
-    flex-wrap: wrap ;
-    background-color: #9B30FF;
-  }
-  
-  .flex-container > div {
-    background-color: #AB82FF;
-    text-align: center;
-    width: 300px;
-    width: 400px;
-    white-space: nowrap;
-    margin: 10px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-    
-  }
+  flex-direction: row;
+  display: inline-flex;
+  flex-wrap: wrap ;
+  background-color: #9B30FF;
+}
 
-  .flex-container > div > button {
-    background-color: #c6abff;
-    margin-bottom:5px;
-  }
+.flex-container > div {
+  background-color: #AB82FF;
+  text-align: center;
+  width: 300px;
+  width: 400px;
+  white-space: nowrap;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  
+}
 
-  #navbar {
-    overflow: hidden;
-    color: white;
-    background-color: #D559D1;
-  }
+.flex-container > div > button {
+  background-color: #c6abff;
+  margin-bottom:5px;
+}
+
+#navbar {
+  overflow: hidden;
+  color: white;
+  background-color: #D559D1;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+#navbar a:hover {
+  background-color: #a93ea6;
+  color: white;
+}
+#navbar a.active {
+  background-color: #04AA6D;
+  color: black;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+.sidebar {
+  position: fixed;
+  height: 100%; 
+  background-color: #D559D1;
+  position: left;
+  overflow: auto;
   
-  #navbar a {
-    float: left;
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px;
-    text-decoration: none;
-  }
-  #navbar a:hover {
-    background-color: #a93ea6;
-    color: white;
-  }
-  #navbar a.active {
-    background-color: #04AA6D;
-    color: black;
-  }
-  
-  .content {
-    padding: 16px;
-  }
-  
-  .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-  
-  .sticky + .content {
-    padding-top: 60px;
-  }
-  .sidebar {
-    position: fixed;
-    height: 100%; 
-    background-color: #D559D1;
-    position: left;
-    overflow: auto;
-    
 }
 
 .alignCenter {
-  text-align: center;
-  padding-top: 10px;
+text-align: center;
+padding-top: 10px;
 }
 
 
 .bar-block{
-    width: 100%;
-    text-align: left;
-    padding-left: 25px;
-    
-    border-right-style: solid;
+  width: 100%;
+  text-align: left;
+  padding-left: 25px;
+  
+  border-right-style: solid;
 }
 
 details code {
-    font-size: 1.1em;
-    max-width: 100wv;
-    overflow-y: auto;
-    overflow-x: hidden;
-    white-space: pre-wrap;
-    /* Since CSS 2.1 */
-    white-space: -moz-pre-wrap;
-    /* Mozilla, since 1999 */
-    white-space: -pre-wrap;
-    /* Opera 4-6 */
-    white-space: -o-pre-wrap;
-    /* Opera 7 */
-    word-wrap: break-word;
-    /* Internet Explorer 5.5+ */
+  font-size: 1.1em;
+  max-width: 100wv;
+  overflow-y: auto;
+  overflow-x: hidden;
+  white-space: pre-wrap;
+  /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
 }
 
 .contacts{
-  background-color: #FFE1FF;
-  border: 5px solid #E75CE3;
-  width: 300px;
-  margin-left: 10px;
-  padding: 10px;
+background-color: #FFE1FF;
+border: 5px solid #E75CE3;
+width: 300px;
+margin-left: 10px;
+padding: 10px;
 }
 
 
 
 h1{
-  margin-left: 10px;
+margin-left: 10px;
 }
 
 .mappa{
-  border: 5px solid #E75CE3;
-  margin-top: 50px;
-  margin-left: 10px;
-  height: 460px;
-  width: 610px;
+border: 5px solid #E75CE3;
+margin-top: 50px;
+margin-left: 10px;
+height: 460px;
+width: 610px;
 }

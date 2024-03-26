@@ -57,9 +57,8 @@ pre {
     
   }
 
-  .flex-container > div > button {
-    background-color: #A04392;
-    color: white;
+  button {
+    background-color: #db92d8;
     margin-bottom:5px;
   }
 
@@ -108,6 +107,13 @@ pre {
     
 }
 
+h0 {
+  font-size: 15px;
+  text-align:justify;
+  text-wrap:wrap;
+  font-weight: 549;
+}
+
 .alignCenter {
   text-align: center;
   padding-top: 10px;
@@ -137,4 +143,69 @@ details code {
     /* Opera 7 */
     word-wrap: break-word;
     /* Internet Explorer 5.5+ */
+}
+
+/*   Open state of the dialog  */
+dialog[open] {
+  border-width: 5px;
+  background-color:#FFE1FF;
+  width:50%;
+  text-wrap: wrap;
+  border-color: #A04392;
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+/*   Closed state of the dialog   */
+dialog {
+  border-width: 5px;
+  background-color:#FFE1FF;
+  width:50%;
+  text-wrap: wrap;
+  border-color: #A04392;
+  opacity: 0;
+  transform: scaleY(0);
+  transition:
+    opacity 0.7s ease-out,
+    transform 0.7s ease-out,
+    overlay 0.7s ease-out allow-discrete,
+    display 0.7s ease-out allow-discrete;
+  /* Equivalent to
+  transition: all 0.7s allow-discrete; */
+}
+
+
+/*   Before-open state  */
+/* Needs to be after the previous dialog[open] rule to take effect,
+    as the specificity is the same */
+@starting-style {
+  dialog[open] {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+}
+
+/* Transition the :backdrop when the dialog modal is promoted to the top layer */
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0%);
+  transition:
+    display 0.7s allow-discrete,
+    overlay 0.7s allow-discrete,
+    background-color 0.7s;
+  /* Equivalent to
+  transition: all 0.7s allow-discrete; */
+}
+
+dialog[open]::backdrop {
+  background-color: rgb(0 0 0 / 25%);
+}
+
+/* This starting-style rule cannot be nested inside the above selector
+because the nesting selector cannot represent pseudo-elements. */
+
+@starting-style {
+  dialog[open]::backdrop {
+    background-color: rgb(0 0 0 / 0%);
+  }
+}
 }
